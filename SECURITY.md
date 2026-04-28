@@ -2,7 +2,7 @@
 
 ## Reporting
 
-If you believe you have found a security issue that affects **SELF Shell** or its users, please report it responsibly through the contact method published on the maintainer’s website or repository security policy when available.
+If you believe you have found a security issue that affects **SELF OS Personal Intelligence** or its users, please report it responsibly through the contact method published on the maintainer’s website or repository security policy when available.
 
 Do not file public issues that include exploit details for unfixed vulnerabilities.
 

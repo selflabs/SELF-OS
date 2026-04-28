@@ -15,7 +15,7 @@ class PersonalDashboardApp : SelfApp {
         name = "Personal dashboard",
         description = "Mock widgets: focus, notes, agents — preview text only.",
         version = "1.0.0",
-        author = "SELF Shell examples",
+        author = "SELF OS Personal Intelligence examples",
         icon = "ic_dashboard",
         category = "Productivity",
         permissions = emptySet(),

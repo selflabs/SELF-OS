@@ -9,7 +9,7 @@ import androidx.compose.ui.text.font.FontWeight
 @Composable
 fun PreviewDisclaimer(modifier: Modifier = Modifier) {
     Text(
-        text = "Preview only. No real earnings are generated in SELF Shell Community Edition.",
+        text = "Preview only. No real earnings are generated in SELF OS Personal Intelligence (Community Edition).",
         style = MaterialTheme.typography.bodySmall,
         fontWeight = FontWeight.Medium,
         color = MaterialTheme.colorScheme.tertiary,

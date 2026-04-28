@@ -1,6 +1,6 @@
 # Local models
 
-SELF Shell Community Edition does **not** bundle a large language model or ONNX runtime by default.
+SELF OS Personal Intelligence (Community Edition) does **not** bundle a large language model or ONNX runtime by default.
 
 ## Cloud model providers
 

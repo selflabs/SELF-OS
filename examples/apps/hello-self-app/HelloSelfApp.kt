@@ -12,7 +12,7 @@ class HelloSelfApp : SelfApp {
         name = "Hello SELF App",
         description = "Minimal example SELF App — shows a toast.",
         version = "1.0.0",
-        author = "SELF Shell examples",
+        author = "SELF OS Personal Intelligence examples",
         icon = "ic_hello",
         category = "Demo",
         permissions = emptySet(),
@@ -22,7 +22,7 @@ class HelloSelfApp : SelfApp {
     override fun launch(context: Context) {
         Toast.makeText(
             context,
-            "Hello SELF Shell — this app runs locally with no backend.",
+            "Hello SELF OS Personal Intelligence — this app runs locally with no backend.",
             Toast.LENGTH_LONG
         ).show()
     }

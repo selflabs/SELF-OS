@@ -17,7 +17,7 @@ class TaskPlannerAgent : Agent {
         name = "Task planner",
         description = "Turns a goal into a short local checklist.",
         version = "1.0.0",
-        author = "SELF Shell examples",
+        author = "SELF OS Personal Intelligence examples",
         permissions = setOf(AgentPermission.LOCAL_STORAGE, AgentPermission.FILE_READ),
         entryPoint = "ai.selflabs.selfshell.examples.agents.planner.TaskPlannerAgent"
     )

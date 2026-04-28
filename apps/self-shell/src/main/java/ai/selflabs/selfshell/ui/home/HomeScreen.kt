@@ -42,7 +42,7 @@ fun HomeScreen(app: SelfShellApplication) {
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Text(
-            text = "SELF Shell Community Edition",
+            text = "SELF OS Personal Intelligence (Community Edition)",
             style = MaterialTheme.typography.headlineSmall
         )
         Text(

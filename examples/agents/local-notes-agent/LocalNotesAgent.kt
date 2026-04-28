@@ -17,7 +17,7 @@ class LocalNotesAgent : Agent {
         name = "Local notes",
         description = "Stores short notes in memory for this session.",
         version = "1.0.0",
-        author = "SELF Shell examples",
+        author = "SELF OS Personal Intelligence examples",
         permissions = setOf(AgentPermission.LOCAL_STORAGE, AgentPermission.FILE_WRITE),
         entryPoint = "ai.selflabs.selfshell.examples.agents.notes.LocalNotesAgent"
     )

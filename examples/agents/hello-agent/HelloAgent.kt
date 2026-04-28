@@ -14,10 +14,10 @@ class HelloAgent : Agent {
 
     override fun getManifest(): AgentManifest = AgentManifest(
         id = "hello-agent",
-        name = "Hello SELF Shell",
-        description = "Greets you and explains SELF Shell Community Edition.",
+        name = "Hello — SELF OS Personal Intelligence",
+        description = "Greets you and explains SELF OS Personal Intelligence (Community Edition).",
         version = "1.0.0",
-        author = "SELF Shell examples",
+        author = "SELF OS Personal Intelligence examples",
         permissions = setOf(AgentPermission.LOCAL_STORAGE),
         entryPoint = "ai.selflabs.selfshell.examples.agents.hello.HelloAgent"
     )
@@ -28,9 +28,9 @@ class HelloAgent : Agent {
 
     override suspend fun handleRequest(request: AgentRequest): AgentResponse {
         val body = """
-            Hi there — this is the Hello agent running locally in SELF Shell.
+            Hi there — this is the Hello agent running locally in SELF OS Personal Intelligence.
             
-            SELF Shell is the open developer layer for building agents and apps on your device.
+            SELF OS Personal Intelligence is the open developer layer for building agents and apps on your device.
             It does not connect to live Harmony Mesh, wallets, or rewards.
             
             You said: "${request.input.trim()}"

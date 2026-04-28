@@ -1,10 +1,10 @@
 # GitHub: `selflabs/SELF-OS`
 
-The **canonical public repository** for SELF Shell is:
+The **canonical public repository** for **SELF OS Personal Intelligence** is:
 
 **https://github.com/selflabs/SELF-OS**
 
-Use that URL for stars, issues, pull requests, and cloning the open personal intelligence shell.
+Use that URL for stars, issues, pull requests, and cloning **SELF OS Personal Intelligence**.
 
 ## If you develop inside a monorepo
 

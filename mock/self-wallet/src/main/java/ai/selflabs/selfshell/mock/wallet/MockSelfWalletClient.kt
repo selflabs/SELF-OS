@@ -10,7 +10,7 @@ class MockSelfWalletClient : SelfWalletClient {
         delay(20)
         return MockBalance(
             amountDisplay = if (linked) "42 ESSENCE (mock)" else "0 ESSENCE (mock)",
-            disclaimer = "Preview only. No real earnings are generated in SELF Shell Community Edition."
+            disclaimer = "Preview only. No real earnings are generated in SELF OS Personal Intelligence (Community Edition)."
         )
     }
 

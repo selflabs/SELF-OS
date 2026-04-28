@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in SELF Shell.
+Thank you for your interest in **SELF OS Personal Intelligence**.
 
 **Public GitHub:** [github.com/selflabs/SELF-OS](https://github.com/selflabs/SELF-OS) — open issues and pull requests there unless your maintainer directs otherwise.
 

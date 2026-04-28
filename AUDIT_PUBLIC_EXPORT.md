@@ -1,6 +1,6 @@
-# SELF Shell — Public Export Audit
+# SELF OS Personal Intelligence — Public Export Audit
 
-Internal report for extracting a public-safe **SELF Shell Community Edition** from the private `selfoscompanion` monorepo. Audit date: 2026-04-28.
+Internal report for extracting a public-safe **SELF OS Personal Intelligence (Community Edition)** from the private `selfoscompanion` monorepo. Audit date: 2026-04-28.
 
 ## 1. Candidate modules safe to copy (patterns only; reimplemented under `ai.selflabs.selfshell`)
 
@@ -57,8 +57,8 @@ Internal report for extracting a public-safe **SELF Shell Community Edition** fr
 |------|---------|--------|
 | Application ID | `com.selflabs.companion` | `ai.selflabs.selfshell` |
 | Namespace | `com.selflabs.*` | `ai.selflabs.selfshell.*` |
-| Display name | SELF OS (in modules) | **SELF Shell** / **SELF Shell Community Edition** |
-| Product naming in UI | “SELF OS Dashboard” | **SELF Shell** + boundary copy to SELF OS Core |
+| Display name | SELF OS (in modules) | **SELF OS Personal Intelligence** / **Community Edition** |
+| Product naming in UI | “SELF OS Dashboard” | **SELF OS Personal Intelligence** + boundary copy to SELF OS Core |
 
 ## 7. Compile blockers expected if naively copying private code
 

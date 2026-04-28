@@ -75,7 +75,7 @@ fun SettingsScreen(app: SelfShellApplication) {
         }
 
         Text(
-            "SELF Shell keeps agents and mock services on-device. " +
+            "SELF OS Personal Intelligence keeps agents and mock services on-device. " +
                 "See docs/OPEN_SOURCE_BOUNDARY.md in the repo for what remains in SELF OS Core.",
             style = MaterialTheme.typography.bodyMedium
         )

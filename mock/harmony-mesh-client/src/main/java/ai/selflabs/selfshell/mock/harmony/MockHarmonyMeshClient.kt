@@ -32,7 +32,7 @@ class MockHarmonyMeshClient : HarmonyMeshClient {
     override suspend fun getMockEarnings(): MockMeshEarnings = MockMeshEarnings(
         label = "Preview only",
         amountDisplay = "0 ESSENCE (mock)",
-        disclaimer = "Preview only. No real earnings are generated in SELF Shell Community Edition."
+        disclaimer = "Preview only. No real earnings are generated in SELF OS Personal Intelligence (Community Edition)."
     )
 
     override suspend fun connectMock() {

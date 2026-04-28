@@ -1,6 +1,6 @@
 # Open-source boundary
 
-## SELF Shell includes (this repository)
+## SELF OS Personal Intelligence includes (this repository)
 
 - Open shell UI (Material 3 / Jetpack Compose).
 - **Agent SDK**: manifests, permissions model, `AgentRuntime`, local execution.
@@ -32,6 +32,6 @@ Labels such as **“Available in SELF OS Core”** in the app refer to this boun
 
 ## Preview-only economics copy
 
-Any reference to balances, “ESSENCE”, payouts, or tasks in SELF Shell is **mocked** unless you deliberately replace mocks with your own **non-production** logic. The UI states:
+Any reference to balances, “ESSENCE”, payouts, or tasks in **SELF OS Personal Intelligence** is **mocked** unless you deliberately replace mocks with your own **non-production** logic. The UI states:
 
-> Preview only. No real earnings are generated in SELF Shell Community Edition.
+> Preview only. No real earnings are generated in SELF OS Personal Intelligence (Community Edition).

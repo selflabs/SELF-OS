@@ -32,7 +32,7 @@ class MockAuraDataClient : AuraDataClient {
         MockValueEstimate(
             categoryId = categoryId,
             displayValue = "$0.00 (mock)",
-            note = "Preview only. Aura data monetization is not active in SELF Shell."
+            note = "Preview only. Aura data monetization is not active in SELF OS Personal Intelligence."
         )
 
     override fun snapshotConsent(): Map<String, Boolean> = consent.toMap()

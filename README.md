@@ -1,28 +1,28 @@
-# SELF Shell
+# SELF OS Personal Intelligence
 
 [![GitHub](https://img.shields.io/badge/GitHub-selflabs%2FSELF--OS-181717?logo=github)](https://github.com/selflabs/SELF-OS)
 
-**Home repository:** [github.com/selflabs/SELF-OS](https://github.com/selflabs/SELF-OS) — canonical source for issues, PRs, and releases of the open personal intelligence shell.
+**Home repository:** [github.com/selflabs/SELF-OS](https://github.com/selflabs/SELF-OS) — canonical source for issues, PRs, and releases of **SELF OS Personal Intelligence**.
 
 **An open-source personal intelligence shell for building, running, and customizing AI agents, apps, and device-native workflows.**
 
-SELF Shell is the open developer layer of SELF OS — a **personal intelligence environment** where people can install agents, run local AI tools, connect apps, and build custom automations around their life.
+**SELF OS Personal Intelligence** is the open developer layer of SELF OS — a **personal intelligence environment** where people can install agents, run local AI tools, connect apps, and build custom automations around their life.
 
-The open-source shell gives developers and power users the foundation to shape their own **agent-powered personal intelligence** setup on-device.
+The open-source edition gives developers and power users the foundation to shape their own **agent-powered personal intelligence** setup on-device.
 
 The full SELF OS experience adds managed agents, Harmony Mesh access, ESSENCE rewards, Aura data monetization, phone services, cloud sync, and production-grade security.
 
 **Tagline:** Build your own personal intelligence system — or connect to the full SELF OS ecosystem when you are ready.
 
-**Platforms:** SELF Shell is a **mobile** personal intelligence layer — meant to run on the devices people carry every day. **Android** is **available now** in this repository (phone and tablet). **Apple (iOS)** is **coming soon**; the same product vision applies across platforms once the iOS shell ships.
+**Platforms:** **SELF OS Personal Intelligence** is a **mobile** layer — meant to run on the devices people carry every day. **Android** is **available now** in this repository (phone and tablet). **Apple (iOS)** is **coming soon**; the same product vision applies across platforms once the iOS edition ships.
 
-**Model providers:** You are not locked into one AI vendor. As you extend agents and apps, you can integrate **different model providers** — for example **[Resonatia](https://resonatia.io/docs)** (quantized models through a REST chat API; authentication and request shape are documented there), [OpenRouter](https://openrouter.ai), **OpenAI**, **Anthropic (Claude)**, **Google (Gemini)**, and other compatible APIs or on-device runtimes. Community Edition ships **deterministic example agents** only; wiring a provider means adding your own client code, credentials, and privacy review. See [docs/LOCAL_MODELS.md](docs/LOCAL_MODELS.md) for local vs cloud notes.
+**Model providers:** You are not locked into one AI vendor. As you extend agents and apps, you can integrate **different model providers** — for example **[Resonatia](https://resonatia.io/docs)** (quantized models through a REST chat API; authentication and request shape are documented there), [OpenRouter](https://openrouter.ai), **OpenAI**, **Anthropic (Claude)**, **Google (Gemini)**, and other compatible APIs or on-device runtimes. **Community Edition** ships **deterministic example agents** only; wiring a provider means adding your own client code, credentials, and privacy review. See [docs/LOCAL_MODELS.md](docs/LOCAL_MODELS.md) for local vs cloud notes.
 
 ---
 
-## 1. What is SELF Shell?
+## 1. What is SELF OS Personal Intelligence?
 
-SELF Shell **Community Edition** is a standalone **Android** app and SDK workspace today: a reference **mobile personal intelligence shell** that shows how the open layer fits together. (An **iOS** edition is planned next.)
+**Community Edition** is a standalone **Android** app and SDK workspace today: a reference **mobile personal intelligence shell** that shows how the open layer fits together. (An **iOS** edition is planned next.)
 
 - A **shell UI** for your personal intelligence workspace (home, agents, apps, mesh preview, wallet preview, settings).
 - **On-device agent execution** via `AgentRuntime` — core to a local-first personal intelligence stack.
@@ -37,9 +37,9 @@ Live SELF OS backends are intentionally out of scope here. See [docs/OPEN_SOURCE
 - **SELF Apps** via `SelfApp` — surfaces and tools that extend what the user can do from one personal intelligence home ([`examples/apps/`](examples/apps/)).
 - **Custom mocks** under `mock/` so prototypes keep the same contracts without touching private infrastructure.
 
-## 3. SELF Shell vs SELF OS (personal intelligence stack)
+## 3. SELF OS Personal Intelligence vs SELF OS Core (full platform)
 
-| This repo: open **personal intelligence shell** | SELF OS Core (separate): full **managed** intelligence & platform |
+| This repo: open **personal intelligence** edition | SELF OS Core (separate): full **managed** intelligence & platform |
 |---------------------------------------------------|---------------------------------------------------------------------|
 | Local shell UI & SDKs for your own PI setup | Live Harmony Mesh routing |
 | Mock economics & tasks (preview only) | ESSENCE earning & settlement |
@@ -59,11 +59,11 @@ Live SELF OS backends are intentionally out of scope here. See [docs/OPEN_SOURCE
 
 The codebase is modular so you can evolve **personal intelligence** without a monolith. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-- `apps/self-shell` — the Android **personal intelligence shell** application.
+- `apps/self-shell` — the Android **personal intelligence** application (Gradle module name unchanged).
 - `sdk/agent-sdk`, `sdk/app-sdk` — contracts for agents and apps that live in the user’s PI stack.
 - `mock/*` — local-only stand-ins for mesh, wallet, store, and data-consent previews.
 
-## 6. Quick Start (Android — run the shell on a device or emulator)
+## 6. Quick Start (Android — run the app on a device or emulator)
 
 This Quick Start is for **Android**; **iOS** setup will be documented when the Apple release is available.
 
@@ -111,7 +111,7 @@ By default there is **no** live link to SELF OS Core. Mocks under `mock/` give d
 
 ## 10. Open-source boundary
 
-What stays in the open **personal intelligence shell** vs what remains in SELF OS Core: [docs/OPEN_SOURCE_BOUNDARY.md](docs/OPEN_SOURCE_BOUNDARY.md).
+What stays in the open **personal intelligence** edition vs what remains in SELF OS Core: [docs/OPEN_SOURCE_BOUNDARY.md](docs/OPEN_SOURCE_BOUNDARY.md).
 
 ## 11. Roadmap
 
@@ -125,12 +125,12 @@ Protecting users and forks of this **personal intelligence** codebase: [SECURITY
 
 ## 13. Contributing
 
-Help improve the open personal intelligence shell: [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Help improve **SELF OS Personal Intelligence**: [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## 14. License
 
-SELF Shell is licensed under the **GNU Affero General Public License v3.0** — see [`LICENSE`](LICENSE). See also [NOTICE](NOTICE).
+**SELF OS Personal Intelligence** is licensed under the **GNU Affero General Public License v3.0** — see [`LICENSE`](LICENSE). See also [NOTICE](NOTICE).
 
 ---
 
-**Preview disclaimer (also shown in-app):** *Preview only. No real earnings are generated in SELF Shell Community Edition.*
+**Preview disclaimer (also shown in-app):** *Preview only. No real earnings are generated in SELF OS Personal Intelligence (Community Edition).*
