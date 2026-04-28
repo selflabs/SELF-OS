@@ -19,4 +19,4 @@ Thank you for your interest in SELF Shell.
 
 ## Licensing
 
-By contributing, you agree your contributions will be licensed under the same terms as this project (see `LICENSE` once the PolyForm Noncommercial text is in place).
+By contributing, you agree your contributions will be licensed under the same terms as this project (see `LICENSE`, AGPL-3.0).

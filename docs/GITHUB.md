@@ -35,6 +35,6 @@ cd SELF-OS
 
 (After the subtree is published, the layout should match this project’s `public-self-shell` contents at the repo root.)
 
-## License note
+## License
 
-The license file on GitHub may differ from placeholders in a monorepo copy (for example **AGPL-3.0** on `selflabs/SELF-OS` vs a **PolyForm** placeholder locally). **Treat the license on the default branch of `selflabs/SELF-OS` as authoritative** for that published tree unless maintainers say otherwise.
+The public tree uses **AGPL-3.0** (`LICENSE`). Keep monorepo copies of `public-self-shell/LICENSE` in sync when publishing.

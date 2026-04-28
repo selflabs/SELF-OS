@@ -16,9 +16,9 @@ No. All rewards and balances are **preview-only** mocks.
 
 Not from this repository as shipped. You would replace mocks with your own client — and must not paste production secrets into public forks.
 
-## Why PolyForm Noncommercial?
+## What license applies?
 
-The placeholder `LICENSE` is intended to become **PolyForm Noncommercial 1.0.0** until maintainers choose a different policy. Replace the placeholder before publishing.
+**AGPL-3.0** — see the `LICENSE` file in the repository.
 
 ## Where is the private codebase?
 

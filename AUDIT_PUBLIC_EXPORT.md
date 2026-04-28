@@ -84,7 +84,7 @@ This audit should be refreshed before any release if private modules change.
 
 ## 10. Manual steps before publishing to GitHub
 
-1. Replace `LICENSE` placeholder with the full PolyForm Noncommercial 1.0.0 text (or another chosen license).
+1. Confirm `LICENSE` matches the policy for **github.com/selflabs/SELF-OS** (currently **AGPL-3.0**).
 2. Run safety scans; confirm no `local.properties` or keystores are committed.
 3. Remove or redact any maintainer-specific paths from contributor docs if copied elsewhere.
 4. Optionally split `public-self-shell` into its own git root for a clean public repository (without monorepo history), if required by your release process.

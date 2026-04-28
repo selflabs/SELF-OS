@@ -123,9 +123,7 @@ Help improve the open personal intelligence shell: [CONTRIBUTING.md](CONTRIBUTIN
 
 ## 14. License
 
-On **[github.com/selflabs/SELF-OS](https://github.com/selflabs/SELF-OS)**, the default branch license (for example **AGPL-3.0**) is authoritative for that published tree.
-
-If your checkout still has a **PolyForm** placeholder from an internal export, replace it with the full legal text you intend to ship, or match the GitHub repo’s `LICENSE` after maintainers align policy. See also [NOTICE](NOTICE).
+SELF Shell is licensed under the **GNU Affero General Public License v3.0** — see [`LICENSE`](LICENSE). See also [NOTICE](NOTICE).
 
 ---
 
