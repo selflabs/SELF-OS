@@ -8,6 +8,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ### Added
 
+- Android **launch smoke test** (`LaunchSmokeTest`) and iOS **UI launch test** (`SelfOSPIUITests`).
 - GitHub Release workflow now attaches **Android APKs** (debug + release R8 builds).
 - [DEVELOPMENT.md](DEVELOPMENT.md) — local build, test, and first-agent contributor guide.
 - [SECURITY.md](SECURITY.md) — private vulnerability reporting and disclosure timelines.

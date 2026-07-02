@@ -73,3 +73,15 @@ jobs:
 
       - name: Build Android release (R8, unsigned store path)
         run: ./gradlew :self-shell:assembleRelease --no-daemon --stacktrace
+
+      - name: Run launch smoke test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          script: >
+            ./gradlew :self-shell:connectedDebugAndroidTest
+            -Pandroid.testInstrumentationRunnerArguments.class=ai.selflabs.selfshell.LaunchSmokeTest
+            --no-daemon --stacktrace

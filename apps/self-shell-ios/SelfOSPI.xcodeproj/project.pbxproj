@@ -23,6 +23,7 @@
 		A1000001000000000000000E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000E /* SettingsView.swift */; };
 		A1000001000000000000000F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000F /* Assets.xcassets */; };
 		A10000010000000000000010 /* SelfOSPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000010 /* SelfOSPITests.swift */; };
+		A10000010000000000000011 /* SelfOSPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000011 /* SelfOSPIUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +44,9 @@
 		A2000001000000000000000F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A30000010000000000000001 /* SelfOSPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfOSPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30000010000000000000002 /* SelfOSPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfOSPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30000010000000000000003 /* SelfOSPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfOSPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20000010000000000000010 /* SelfOSPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfOSPITests.swift; sourceTree = "<group>"; };
+		A20000010000000000000011 /* SelfOSPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfOSPIUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A40000010000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +79,7 @@
 			children = (
 				A50000010000000000000002 /* SelfOSPI */,
 				A50000010000000000000008 /* SelfOSPITests */,
+				A50000010000000000000009 /* SelfOSPIUITests */,
 				A50000010000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +103,7 @@
 			children = (
 				A30000010000000000000001 /* SelfOSPI.app */,
 				A30000010000000000000002 /* SelfOSPITests.xctest */,
+				A30000010000000000000003 /* SelfOSPIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +156,14 @@
 			path = SelfOSPITests;
 			sourceTree = "<group>";
 		};
+		A50000010000000000000009 /* SelfOSPIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000011 /* SelfOSPIUITests.swift */,
+			);
+			path = SelfOSPIUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,10 +202,35 @@
 			productReference = A30000010000000000000002 /* SelfOSPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A60000010000000000000003 /* SelfOSPIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000010000000000000005 /* Build configuration list for PBXNativeTarget "SelfOSPIUITests" */;
+			buildPhases = (
+				A70000010000000000000004 /* Sources */,
+				A40000010000000000000003 /* Frameworks */,
+				A70000010000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B90000010000000000000004 /* PBXTargetDependency */,
+			);
+			name = SelfOSPIUITests;
+			productName = SelfOSPIUITests;
+			productReference = A30000010000000000000003 /* SelfOSPIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXContainerItemProxy section */
 		B90000010000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A90000010000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60000010000000000000001;
+			remoteInfo = SelfOSPI;
+		};
+		B90000010000000000000003 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A90000010000000000000001 /* Project object */;
 			proxyType = 1;
@@ -199,6 +244,11 @@
 			isa = PBXTargetDependency;
 			target = A60000010000000000000001 /* SelfOSPI */;
 			targetProxy = B90000010000000000000001 /* PBXContainerItemProxy */;
+		};
+		B90000010000000000000004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60000010000000000000001 /* SelfOSPI */;
+			targetProxy = B90000010000000000000003 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -214,6 +264,10 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					A60000010000000000000002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = A60000010000000000000001;
+					};
+					A60000010000000000000003 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = A60000010000000000000001;
 					};
@@ -234,6 +288,7 @@
 			targets = (
 				A60000010000000000000001 /* SelfOSPI */,
 				A60000010000000000000002 /* SelfOSPITests */,
+				A60000010000000000000003 /* SelfOSPIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +312,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A70000010000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,6 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000010000000000000010 /* SelfOSPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70000010000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000011 /* SelfOSPIUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +514,52 @@
 			};
 			name = Release;
 		};
+		AB0000010000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SelfOSPI;
+			};
+			name = Debug;
+		};
+		AB0000010000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SelfOSPI;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,6 +586,15 @@
 			buildConfigurations = (
 				AB0000010000000000000005 /* Debug */,
 				AB0000010000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000010000000000000005 /* Build configuration list for PBXNativeTarget "SelfOSPIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000010000000000000007 /* Debug */,
+				AB0000010000000000000008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
