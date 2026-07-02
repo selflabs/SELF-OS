@@ -1,5 +1,8 @@
 # SELF OS Personal Intelligence
 
+<img width="1916" height="821" alt="image" src="https://github.com/user-attachments/assets/8dd56ce6-87a4-4d0a-b5d0-4bdca274730c" />
+
+
 [![GitHub](https://img.shields.io/badge/GitHub-selflabs%2FSELF--OS-181717?logo=github)](https://github.com/selflabs/SELF-OS)
 
 **Home repository:** [github.com/selflabs/SELF-OS](https://github.com/selflabs/SELF-OS) — canonical source for issues, PRs, and releases of **SELF OS Personal Intelligence**.
