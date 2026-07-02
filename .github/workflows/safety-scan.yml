@@ -1,0 +1,15 @@
+name: Safety scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run public safety scan
+        run: bash scripts/scan-public-safety.sh

@@ -44,5 +44,15 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      - name: Run unit tests
+        run: >
+          ./gradlew
+          :agent-sdk:testDebugUnitTest
+          :mock-harmony-mesh:testDebugUnitTest
+          :mock-self-wallet:testDebugUnitTest
+          :mock-app-store:testDebugUnitTest
+          :self-shell:testDebugUnitTest
+          --no-daemon --stacktrace
+
       - name: Build Android debug
         run: ./gradlew :self-shell:assembleDebug --no-daemon --stacktrace

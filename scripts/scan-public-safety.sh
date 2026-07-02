@@ -19,7 +19,7 @@ while IFS= read -r -d '' f; do
     */build/*) continue ;;
   esac
   scan_file "$f"
-done < <(find apps sdk mock examples -type f \( -name '*.kt' -o -name '*.kts' -o -name '*.xml' -o -name '*.properties' -o -name '*.json' \) -print0 2>/dev/null)
+done < <(find apps sdk mock examples -type f \( -name '*.kt' -o -name '*.kts' -o -name '*.xml' -o -name '*.properties' -o -name '*.json' -o -name '*.swift' \) -print0 2>/dev/null)
 
 for gf in build.gradle.kts settings.gradle.kts gradle.properties; do
   [[ -f "$gf" ]] || continue

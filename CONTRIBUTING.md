@@ -14,8 +14,9 @@ Thank you for your interest in **SELF OS Personal Intelligence**.
 ## Before you open a PR
 
 1. Build: `scripts/build-public.ps1` or `./scripts/build-public.sh`
-2. Safety scan: `scripts/scan-public-safety.ps1` or `./scripts/scan-public-safety.sh`
-3. Confirm mock-only behavior for mesh, wallet, store, and Aura surfaces.
+2. Tests: `./gradlew :agent-sdk:testDebugUnitTest :self-shell:testDebugUnitTest` (and mock modules as needed)
+3. Safety scan: `scripts/scan-public-safety.ps1` or `./scripts/scan-public-safety.sh`
+4. Confirm mock-only behavior for mesh, wallet, store, and Aura surfaces.
 
 ## Licensing
 

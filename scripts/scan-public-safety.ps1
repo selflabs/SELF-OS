@@ -23,7 +23,7 @@ foreach ($pat in $riskFiles) {
 }
 
 $scanDirs = @("apps", "sdk", "mock", "examples")
-$extensions = @("*.kt", "*.kts", "*.xml", "*.properties", "*.json")
+$extensions = @("*.kt", "*.kts", "*.xml", "*.properties", "*.json", "*.swift")
 $patterns = @(
     "apiKey", "API_KEY", "secret", "bearer", "private_key", "service_account",
     "firebase", "supabase", "telnyx", "stripe", "solana",
