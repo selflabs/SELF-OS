@@ -5,6 +5,7 @@ Required checks for merging to `main` on [selflabs/SELF-OS](https://github.com/s
 | Workflow | Job | What it verifies |
 |----------|-----|------------------|
 | [Android build](.github/workflows/android.yml) | `android` | Unit tests, debug APK, release APK (R8) |
+| [Android build](.github/workflows/android.yml) | `android-smoke` | Optional emulator launch smoke test (advisory; may flake) |
 | [iOS build](.github/workflows/ios.yml) | `ios` | Simulator debug/release builds + unit tests |
 | [Safety scan](.github/workflows/safety-scan.yml) | `scan` | No secrets / risky patterns in tree |
 
