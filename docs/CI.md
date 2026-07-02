@@ -24,14 +24,21 @@ If check names differ in the GitHub UI, pick the three jobs listed above from th
 Apply via CLI (org admin):
 
 ```bash
-gh api repos/selflabs/SELF-OS/branches/main/protection -X PUT \
-  -f required_status_checks[strict]=true \
-  -f required_status_checks[contexts][]=android \
-  -f required_status_checks[contexts][]=ios \
-  -f required_status_checks[contexts][]=scan \
-  -f enforce_admins=true \
-  -f required_pull_request_reviews[required_approving_review_count]=0 \
-  -F restrictions=
+gh api repos/selflabs/SELF-OS/branches/main/protection -X PUT --input - <<'EOF'
+{
+  "required_status_checks": {
+    "strict": true,
+    "contexts": ["android", "ios", "scan"]
+  },
+  "enforce_admins": true,
+  "required_pull_request_reviews": {
+    "required_approving_review_count": 0
+  },
+  "restrictions": null,
+  "allow_force_pushes": false,
+  "allow_deletions": false
+}
+EOF
 ```
 
 Adjust review count and restrictions to match your team policy.
