@@ -6,6 +6,8 @@ SELF OS Personal Intelligence (Community Edition) does **not** bundle a large la
 
 You can route agent logic to hosted APIs — for example **[Resonatia](https://resonatia.io/docs)** ([Resonant Intelligence Gateway](https://resonatia.io); chat completions and related endpoints per [their docs](https://resonatia.io/docs)), [OpenRouter](https://openrouter.ai), OpenAI, Anthropic (Claude), Google (Gemini), or others. Use **your** API keys (e.g. Bearer token where documented), follow each vendor’s terms, and keep keys out of source control.
 
+Copy [`.env.example`](../.env.example) to `.env` locally for placeholder variable names when wiring agents. The stock Community Edition app does not load `.env` automatically.
+
 ### Resonatia
 
 Integrate from Android agents using any HTTP client: authenticate as in [Resonatia’s Quick Start](https://resonatia.io/docs), send chat-style requests to their API base (see current host and paths in the docs), and map responses back inside `Agent.handleRequest`. This repo does not ship a bundled Resonatia SDK; treat it like any other HTTPS model backend you opt into.
