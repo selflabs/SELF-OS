@@ -6,9 +6,8 @@ final class LaunchSmokeTests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        let headline = app.staticTexts["SELF OS Personal Intelligence (Community Edition)"]
-        XCTAssertTrue(headline.waitForExistence(timeout: 10))
-
+        XCTAssertTrue(app.descendants(matching: .any)["home_screen"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.descendants(matching: .any)["home_welcome"].exists)
         XCTAssertTrue(app.tabBars.buttons["Home"].exists)
     }
 }

@@ -10,6 +10,7 @@ struct HomeView: View {
                     Text("SELF OS Personal Intelligence (Community Edition)")
                         .font(.title2.bold())
                     Text("Welcome to your local personal intelligence workspace.")
+                        .accessibilityIdentifier(UiTestTags.homeWelcome)
                     MockPreviewBanner()
                     card("Local agents") { Text("\(env.agentRuntime.manifests.count) example agents registered.") }
                     card("Installed SELF Apps") { Text("\(env.selfApps.count) demo apps in the local registry.") }
@@ -25,6 +26,7 @@ struct HomeView: View {
                 }
                 .padding()
             }
+            .accessibilityIdentifier(UiTestTags.homeScreen)
             .navigationTitle("Home")
         }
     }

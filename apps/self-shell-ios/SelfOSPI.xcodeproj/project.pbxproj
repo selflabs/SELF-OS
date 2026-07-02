@@ -24,6 +24,7 @@
 		A1000001000000000000000F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000F /* Assets.xcassets */; };
 		A10000010000000000000010 /* SelfOSPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000010 /* SelfOSPITests.swift */; };
 		A10000010000000000000011 /* SelfOSPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000011 /* SelfOSPIUITests.swift */; };
+		A10000010000000000000012 /* UiTestTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000012 /* UiTestTags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A30000010000000000000003 /* SelfOSPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfOSPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20000010000000000000010 /* SelfOSPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfOSPITests.swift; sourceTree = "<group>"; };
 		A20000010000000000000011 /* SelfOSPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfOSPIUITests.swift; sourceTree = "<group>"; };
+		A20000010000000000000012 /* UiTestTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTestTags.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				A20000010000000000000001 /* SelfOSPIApp.swift */,
 				A20000010000000000000002 /* ContentView.swift */,
+				A20000010000000000000012 /* UiTestTags.swift */,
 				A20000010000000000000003 /* Models.swift */,
 				A50000010000000000000004 /* Agents */,
 				A50000010000000000000005 /* Services */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000010000000000000001 /* SelfOSPIApp.swift in Sources */,
+				A10000010000000000000012 /* UiTestTags.swift in Sources */,
 				A10000010000000000000002 /* ContentView.swift in Sources */,
 				A10000010000000000000003 /* Models.swift in Sources */,
 				A10000010000000000000004 /* ExampleAgents.swift in Sources */,
@@ -428,7 +432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -457,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -480,7 +484,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -504,7 +508,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -527,7 +531,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -550,7 +554,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = ai.selflabs.selfospi.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;

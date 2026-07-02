@@ -17,6 +17,7 @@ struct SettingsView: View {
                     .pickerStyle(.segmented)
                 }
                 Section("About") {
+                    Text("Version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "—")")
                     Text("SELF OS Personal Intelligence keeps agents and mock services on-device. See docs/OPEN_SOURCE_BOUNDARY.md in the repository.")
                         .font(.caption)
                 }

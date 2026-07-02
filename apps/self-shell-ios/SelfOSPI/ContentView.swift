@@ -8,6 +8,7 @@ struct ContentView: View {
         TabView {
             HomeView()
                 .tabItem { Label("Home", systemImage: "house") }
+                .accessibilityIdentifier(UiTestTags.tabHome)
             AgentsView()
                 .tabItem { Label("Agents", systemImage: "cpu") }
             AppsView()

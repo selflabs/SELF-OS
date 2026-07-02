@@ -76,6 +76,37 @@ class DefaultAgentRuntimeTest {
         assertNull(runtime.getAgent("stub-1"))
     }
 
+    @Test
+    fun sendRequest_throwingAgent_returnsError() = runTest {
+        runtime.registerAgent(ThrowingAgent("stub-throw"))
+
+        val response = runtime.sendRequest("stub-throw", "ping")
+
+        assertEquals(AgentRunStatus.ERROR, response.status)
+        assertTrue(response.output.contains("boom"))
+        assertEquals("RuntimeException", response.metadata["exception"])
+    }
+
+    private class ThrowingAgent(private val id: String) : Agent {
+        override fun getManifest(): AgentManifest = AgentManifest(
+            id = id,
+            name = "Throwing",
+            description = "Test agent",
+            version = "1.0.0",
+            author = "tests",
+            permissions = emptySet(),
+            entryPoint = "stub"
+        )
+
+        override suspend fun initialize() {}
+
+        override suspend fun handleRequest(request: AgentRequest): AgentResponse {
+            throw RuntimeException("boom")
+        }
+
+        override suspend fun shutdown() {}
+    }
+
     private class StubAgent(
         private val id: String,
         private val reply: String

@@ -2,8 +2,9 @@ package ai.selflabs.selfshell
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onAllNodesWithText
-import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onAllNodesWithTag
+import androidx.compose.ui.test.onNodeWithTag
+import ai.selflabs.selfshell.ui.UiTestTags
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,12 +20,12 @@ class LaunchSmokeTest {
     fun launchesHomeScreen() {
         composeTestRule.waitUntil(timeoutMillis = 15_000) {
             composeTestRule
-                .onAllNodesWithText("Welcome to your local personal intelligence shell.", useUnmergedTree = true)
+                .onAllNodesWithTag(UiTestTags.HOME_SCREEN, useUnmergedTree = true)
                 .fetchSemanticsNodes()
                 .isNotEmpty()
         }
-        composeTestRule
-            .onNodeWithText("Welcome to your local personal intelligence shell.")
-            .assertIsDisplayed()
+        composeTestRule.onNodeWithTag(UiTestTags.HOME_SCREEN).assertIsDisplayed()
+        composeTestRule.onNodeWithTag(UiTestTags.HOME_WELCOME).assertIsDisplayed()
+        composeTestRule.onNodeWithTag(UiTestTags.TAB_HOME).assertIsDisplayed()
     }
 }

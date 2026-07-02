@@ -17,12 +17,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import ai.selflabs.selfshell.SelfShellApplication
 import ai.selflabs.selfshell.mock.harmony.MeshNodeStatus
 import ai.selflabs.selfshell.mock.wallet.MockBalance
 import ai.selflabs.selfshell.ui.components.MockPreviewBanner
 import ai.selflabs.selfshell.ui.components.PreviewDisclaimer
+import ai.selflabs.selfshell.ui.UiTestTags
 @Composable
 fun HomeScreen(app: SelfShellApplication) {
     var node by remember { mutableStateOf<MeshNodeStatus?>(null) }
@@ -37,6 +39,7 @@ fun HomeScreen(app: SelfShellApplication) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .testTag(UiTestTags.HOME_SCREEN)
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -47,7 +50,8 @@ fun HomeScreen(app: SelfShellApplication) {
         )
         Text(
             text = "Welcome to your local personal intelligence shell.",
-            style = MaterialTheme.typography.bodyMedium
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.testTag(UiTestTags.HOME_WELCOME)
         )
         MockPreviewBanner()
 

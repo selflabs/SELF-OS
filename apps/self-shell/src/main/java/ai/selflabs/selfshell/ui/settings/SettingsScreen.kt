@@ -1,6 +1,7 @@
 package ai.selflabs.selfshell.ui.settings
 
 import ai.selflabs.selfshell.SelfShellApplication
+import ai.selflabs.selfshell.BuildConfig
 import ai.selflabs.selfshell.ThemeChoice
 import ai.selflabs.selfshell.mock.aura.MockDataCategory
 import androidx.compose.foundation.layout.Arrangement
@@ -57,6 +58,11 @@ fun SettingsScreen(app: SelfShellApplication) {
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text("Settings", style = MaterialTheme.typography.headlineSmall)
+
+        Text(
+            text = "Version ${BuildConfig.VERSION_NAME}",
+            style = MaterialTheme.typography.bodyMedium
+        )
 
         RowSwitch("Local-first mode (recommended)", localMode) { localMode = it }
         RowSwitch("Developer mode", devMode) { devMode = it }

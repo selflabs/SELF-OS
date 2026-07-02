@@ -19,6 +19,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -31,6 +32,7 @@ import ai.selflabs.selfshell.ui.home.HomeScreen
 import ai.selflabs.selfshell.ui.mesh.MeshPreviewScreen
 import ai.selflabs.selfshell.ui.settings.SettingsScreen
 import ai.selflabs.selfshell.ui.theme.SelfShellTheme
+import ai.selflabs.selfshell.ui.UiTestTags
 import ai.selflabs.selfshell.ui.wallet.WalletPreviewScreen
 
 class MainActivity : ComponentActivity() {
@@ -62,7 +64,8 @@ class MainActivity : ComponentActivity() {
                                         }
                                     },
                                     icon = { Icon(Icons.Default.Home, contentDescription = null) },
-                                    label = { Text("Home") }
+                                    label = { Text("Home") },
+                                    modifier = Modifier.testTag(UiTestTags.TAB_HOME)
                                 )
                                 NavigationBarItem(
                                     selected = route == Routes.Agents,
