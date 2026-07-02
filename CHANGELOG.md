@@ -4,6 +4,14 @@ All notable changes to **SELF OS Personal Intelligence (Community Edition)** are
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning uses `MAJOR.MINOR.PATCH-community` for open releases.
 
+## [Unreleased]
+
+### Added
+
+- GitHub Release workflow now attaches **Android APKs** (debug + release R8 builds).
+- [DEVELOPMENT.md](DEVELOPMENT.md) — local build, test, and first-agent contributor guide.
+- [SECURITY.md](SECURITY.md) — private vulnerability reporting and disclosure timelines.
+
 ## [0.1.0-community] - 2026-07-02
 
 ### Added

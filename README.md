@@ -94,6 +94,8 @@ On Windows:
 
 Open the project in Android Studio to iterate on your **personal intelligence** UI and agents.
 
+**No build tools?** Download a prebuilt APK from [GitHub Releases](https://github.com/selflabs/SELF-OS/releases) (`selfos-pi-community-debug.apk` is the quickest way to try CE on a device). Full developer setup: [DEVELOPMENT.md](DEVELOPMENT.md).
+
 ### iOS (simulator or device)
 
 Requirements: **macOS**, **Xcode 15+**, **iOS 17+** simulator or device.
