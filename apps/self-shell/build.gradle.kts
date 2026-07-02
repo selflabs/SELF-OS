@@ -11,8 +11,8 @@ android {
         applicationId = "ai.selflabs.selfshell"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.1.0-community"
+        versionCode = 2
+        versionName = "0.1.2-community"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -42,6 +42,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {

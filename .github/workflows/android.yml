@@ -62,6 +62,8 @@ jobs:
         run: >
           ./gradlew
           :agent-sdk:testDebugUnitTest
+          :app-sdk:testDebugUnitTest
+          :mock-aura-data:testDebugUnitTest
           :mock-harmony-mesh:testDebugUnitTest
           :mock-self-wallet:testDebugUnitTest
           :mock-app-store:testDebugUnitTest

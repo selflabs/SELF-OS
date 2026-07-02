@@ -8,7 +8,7 @@ class DefaultPluginRegistry : PluginRegistry {
     private val apps = ConcurrentHashMap<String, SelfApp>()
 
     override fun registerApp(app: SelfApp) {
-        apps[app.getManifest().id] = app
+        apps.put(app.getManifest().id, app)?.stop()
     }
 
     override fun unregisterApp(appId: String) {
