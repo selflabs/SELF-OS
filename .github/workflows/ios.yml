@@ -20,17 +20,35 @@ jobs:
         working-directory: apps/self-shell-ios
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare Xcode simulators
-        run: xcrun simctl list > /dev/null
+      - name: Select iOS Simulator
+        id: simulator
+        run: |
+          DEVICE_ID=$(xcrun simctl list devices available -j \
+            | python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          for runtime, devices in data.get('devices', {}).items():
+              if 'iOS' not in runtime:
+                  continue
+              for device in devices:
+                  if device.get('isAvailable') and 'iPhone' in device.get('name', ''):
+                      print(device['udid'])
+                      sys.exit(0)
+          sys.exit(1)
+          ")
+          echo "device_id=$DEVICE_ID" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$DEVICE_ID" 2>/dev/null || true
+          xcrun simctl bootstatus "$DEVICE_ID" -b
+
       - name: Run unit tests
         run: |
           xcodebuild test \
             -project SelfOSPI.xcodeproj \
             -scheme SelfOSPI \
             -sdk iphonesimulator \
-            -destination 'generic/platform=iOS Simulator' \
+            -destination "platform=iOS Simulator,id=${{ steps.simulator.outputs.device_id }}" \
             -configuration Debug \
-            CODE_SIGNING_ALLOWED=NO
+            -resultBundlePath TestResults.xcresult
 
       - name: Build for iOS Simulator (Debug)
         run: |
