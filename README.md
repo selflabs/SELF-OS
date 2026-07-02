@@ -1,5 +1,8 @@
 # SELF OS Personal Intelligence
 
+[![Android build](https://github.com/selflabs/SELF-OS/actions/workflows/android.yml/badge.svg)](https://github.com/selflabs/SELF-OS/actions/workflows/android.yml)
+[![iOS build](https://github.com/selflabs/SELF-OS/actions/workflows/ios.yml/badge.svg)](https://github.com/selflabs/SELF-OS/actions/workflows/ios.yml)
+[![Safety scan](https://github.com/selflabs/SELF-OS/actions/workflows/safety-scan.yml/badge.svg)](https://github.com/selflabs/SELF-OS/actions/workflows/safety-scan.yml)
 [![GitHub](https://img.shields.io/badge/GitHub-selflabs%2FSELF--OS-181717?logo=github)](https://github.com/selflabs/SELF-OS)
 
 **Home repository:** [github.com/selflabs/SELF-OS](https://github.com/selflabs/SELF-OS) — canonical source for issues, PRs, and releases of **SELF OS Personal Intelligence**.
@@ -100,7 +103,7 @@ open SelfOSPI.xcodeproj
 
 Select the **SelfOSPI** scheme and press **Run** (⌘R). See [apps/self-shell-ios/README.md](apps/self-shell-ios/README.md) and [docs/IOS.md](docs/IOS.md).
 
-**Monorepo maintainers:** see [docs/GITHUB.md](docs/GITHUB.md) for pushing this tree to `selflabs/SELF-OS`.
+**Monorepo maintainers:** see [docs/GITHUB.md](docs/GITHUB.md) for pushing this tree to `selflabs/SELF-OS`. CI details: [docs/CI.md](docs/CI.md). Release history: [CHANGELOG.md](CHANGELOG.md).
 
 ## 7. Creating an agent (intelligence primitive)
 

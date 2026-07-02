@@ -8,7 +8,19 @@ Use that URL for stars, issues, pull requests, and cloning **SELF OS Personal In
 
 ## If you develop inside a monorepo
 
-Some teams keep `public-self-shell/` inside a larger private tree while publishing to GitHub. In that case:
+Some teams keep `public-self-shell/` inside a larger private tree while publishing to GitHub.
+
+### Automated publish (recommended)
+
+Workflow: `.github/workflows/publish-self-os.yml` in the **monorepo root** (not inside `public-self-shell` alone).
+
+| Secret | Description |
+|--------|-------------|
+| `SELF_OS_PUBLISH_TOKEN` | GitHub PAT with `contents: write` on `selflabs/SELF-OS` |
+
+Add under **Settings → Secrets and variables → Actions** in the monorepo. On push to `main` that touches `public-self-shell/**`, the workflow subtree-splits and pushes to `selflabs/SELF-OS`.
+
+### Manual publish
 
 1. Add the GitHub remote (once per clone):
 
@@ -16,24 +28,33 @@ Some teams keep `public-self-shell/` inside a larger private tree while publishi
    git remote add self-os https://github.com/selflabs/SELF-OS.git
    ```
 
-2. Push only the `public-self-shell` subtree to the remote’s branch (example: `main`):
+2. Split, merge remote `main`, and push:
 
    ```bash
-   git subtree push --prefix=public-self-shell self-os main
+   git subtree split --prefix=public-self-shell -b self-os-publish
+   git worktree add self-shell-wt self-os-publish
+   cd self-shell-wt
+   git fetch self-os main
+   git merge FETCH_HEAD -m "Merge remote main"
+   git push self-os HEAD:main
    ```
 
-   You need push access to `selflabs/SELF-OS`. The first push may require reconciling history if the GitHub repo already has commits (for example an initial `LICENSE`); coordinate with maintainers or use a PR branch instead of force-pushing.
+   Plain `git subtree push` often fails with non-fast-forward history; the merge step above is the supported path.
 
 ### Alternative: standalone clone
-
-To work only against GitHub:
 
 ```bash
 git clone https://github.com/selflabs/SELF-OS.git
 cd SELF-OS
 ```
 
-(After the subtree is published, the layout should match this project’s `public-self-shell` contents at the repo root.)
+## CI and branch protection
+
+Required checks: see [docs/CI.md](CI.md). Enable branch protection on `main` after workflows have run once.
+
+## Releases
+
+Tag community editions (example: `v0.1.0-community`). Pushing a tag runs `.github/workflows/release.yml` and creates a GitHub Release. History: [CHANGELOG.md](../CHANGELOG.md).
 
 ## License
 

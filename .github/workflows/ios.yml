@@ -13,7 +13,7 @@ on:
       - '.github/workflows/ios.yml'
 
 jobs:
-  build:
+  ios:
     runs-on: macos-latest
     defaults:
       run:
@@ -22,6 +22,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare Xcode simulators
         run: xcrun simctl list > /dev/null
+      - name: Run unit tests
+        run: |
+          xcodebuild test \
+            -project SelfOSPI.xcodeproj \
+            -scheme SelfOSPI \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO
+
       - name: Build for iOS Simulator (Debug)
         run: |
           xcodebuild \
