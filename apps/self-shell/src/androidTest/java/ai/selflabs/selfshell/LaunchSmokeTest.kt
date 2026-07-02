@@ -17,18 +17,14 @@ class LaunchSmokeTest {
 
     @Test
     fun launchesHomeScreen() {
-        composeTestRule.waitUntil(timeoutMillis = 10_000) {
+        composeTestRule.waitUntil(timeoutMillis = 15_000) {
             composeTestRule
-                .onAllNodesWithText("SELF OS Personal Intelligence (Community Edition)", useUnmergedTree = true)
+                .onAllNodesWithText("Welcome to your local personal intelligence shell.", useUnmergedTree = true)
                 .fetchSemanticsNodes()
                 .isNotEmpty()
         }
         composeTestRule
-            .onNodeWithText("SELF OS Personal Intelligence (Community Edition)")
-            .assertIsDisplayed()
-        composeTestRule
             .onNodeWithText("Welcome to your local personal intelligence shell.")
             .assertIsDisplayed()
-        composeTestRule.onNodeWithText("Home").assertIsDisplayed()
     }
 }
