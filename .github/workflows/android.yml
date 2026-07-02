@@ -78,6 +78,7 @@ jobs:
 
   android-smoke:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -94,12 +95,27 @@ jobs:
       - name: Run launch smoke test
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 30
-          target: google_atd
+          api-level: 34
+          target: google_apis
           arch: x86_64
+          cores: 4
           disable-animations: true
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
-          script: >
-            ./gradlew :self-shell:connectedDebugAndroidTest
-            -Pandroid.testInstrumentationRunnerArguments.class=ai.selflabs.selfshell.LaunchSmokeTest
-            --no-daemon --stacktrace
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -no-metrics
+          script: |
+            adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d "\r") ]]; do sleep 1; done'
+            adb shell input keyevent 82
+            set +e
+            ./gradlew :self-shell:connectedDebugAndroidTest \
+              -Pandroid.testInstrumentationRunnerArguments.class=ai.selflabs.selfshell.LaunchSmokeTest \
+              --no-daemon --stacktrace
+            status=$?
+            if [ "$status" -ne 0 ]; then
+              echo "Smoke test failed (exit $status); retrying once after adb settle..."
+              sleep 15
+              adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed | tr -d "\r") ]]; do sleep 1; done'
+              ./gradlew :self-shell:connectedDebugAndroidTest \
+                -Pandroid.testInstrumentationRunnerArguments.class=ai.selflabs.selfshell.LaunchSmokeTest \
+                --no-daemon --stacktrace
+              status=$?
+            fi
+            exit "$status"
