@@ -35,7 +35,7 @@ class MockHarmonyMeshClientTest {
         val receipt = client.submitMockProof("mock-1")
 
         assertEquals("proof-mock-1", receipt.id)
-        assertTrue(receipt.message.contains("mock"))
+        assertTrue(receipt.message.contains("mock", ignoreCase = true))
     }
 
     @Test

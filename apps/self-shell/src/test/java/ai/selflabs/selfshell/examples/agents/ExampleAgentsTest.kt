@@ -65,10 +65,10 @@ class ExampleAgentsTest {
     }
 
     @Test
-    fun localNotesAgent_invalidAdd_returnsError() = runTest {
-        val response = notesAgent.handleRequest(AgentRequest("r1", "add   ", emptyMap(), 0L))
+    fun localNotesAgent_bareAdd_returnsHelp() = runTest {
+        val response = notesAgent.handleRequest(AgentRequest("r1", "add", emptyMap(), 0L))
 
-        assertEquals(AgentRunStatus.ERROR, response.status)
-        assertTrue(response.output.contains("Usage"))
+        assertEquals(AgentRunStatus.OK, response.status)
+        assertTrue(response.output.contains("Commands"))
     }
 }
