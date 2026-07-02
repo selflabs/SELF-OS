@@ -53,6 +53,17 @@
                ReferencedContainer = "container:SelfOSPI.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A60000010000000000000003"
+               BuildableName = "SelfOSPIUITests.xctest"
+               BlueprintName = "SelfOSPIUITests"
+               ReferencedContainer = "container:SelfOSPI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

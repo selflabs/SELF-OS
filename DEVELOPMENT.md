@@ -62,6 +62,15 @@ APK output: `apps/self-shell/build/outputs/apk/debug/`
   :self-shell:testDebugUnitTest
 ```
 
+### Launch smoke test (Android, device or emulator)
+
+```bash
+./gradlew :self-shell:connectedDebugAndroidTest \
+  -Pandroid.testInstrumentationRunnerArguments.class=ai.selflabs.selfshell.LaunchSmokeTest
+```
+
+iOS launch smoke tests run with the **SelfOSPI** scheme (`SelfOSPIUITests`) via Xcode or `xcodebuild test`.
+
 Release build (R8 minify, debug signing for CI only):
 
 ```bash
