@@ -56,3 +56,6 @@ jobs:
 
       - name: Build Android debug
         run: ./gradlew :self-shell:assembleDebug --no-daemon --stacktrace
+
+      - name: Build Android release (R8, unsigned store path)
+        run: ./gradlew :self-shell:assembleRelease --no-daemon --stacktrace

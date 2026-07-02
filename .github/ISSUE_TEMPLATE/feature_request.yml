@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest an improvement to the open personal intelligence layer
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas for **SELF OS Personal Intelligence (Community Edition)** should stay within the [open-source boundary](https://github.com/selflabs/SELF-OS/blob/main/docs/OPEN_SOURCE_BOUNDARY.md) — no live Harmony Mesh, wallet settlement, or production credentials in-tree.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Android shell
+        - iOS shell
+        - Agent SDK
+        - App SDK
+        - Mock services
+        - Docs / developer experience
+        - CI / tooling
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What personal intelligence workflow is hard today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary check
+      options:
+        - label: This can be implemented without connecting to private SELF OS Core production APIs
+          required: true
