@@ -1,5 +1,7 @@
 # SELF OS Personal Intelligence
 
+<img width="1916" height="821" alt="image" src="https://github.com/user-attachments/assets/8dd56ce6-87a4-4d0a-b5d0-4bdca274730c" />
+
 [![Android build](https://github.com/selflabs/SELF-OS/actions/workflows/android.yml/badge.svg)](https://github.com/selflabs/SELF-OS/actions/workflows/android.yml)
 [![iOS build](https://github.com/selflabs/SELF-OS/actions/workflows/ios.yml/badge.svg)](https://github.com/selflabs/SELF-OS/actions/workflows/ios.yml)
 [![Safety scan](https://github.com/selflabs/SELF-OS/actions/workflows/safety-scan.yml/badge.svg)](https://github.com/selflabs/SELF-OS/actions/workflows/safety-scan.yml)
