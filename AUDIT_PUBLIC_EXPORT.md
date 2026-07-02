@@ -55,7 +55,7 @@ Internal report for extracting a public-safe **SELF OS Personal Intelligence (Co
 
 | Item | Private | Public |
 |------|---------|--------|
-| Application ID | `com.selflabs.companion` | `ai.selflabs.selfshell` |
+| Application ID | `com.selflabs.companion` | `ai.selflabs.selfshell` (Android), `ai.selflabs.selfospi` (iOS) |
 | Namespace | `com.selflabs.*` | `ai.selflabs.selfshell.*` |
 | Display name | SELF OS (in modules) | **SELF OS Personal Intelligence** / **Community Edition** |
 | Product naming in UI | “SELF OS Dashboard” | **SELF OS Personal Intelligence** + boundary copy to SELF OS Core |

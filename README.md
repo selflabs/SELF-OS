@@ -14,7 +14,7 @@ The full SELF OS experience adds managed agents, Harmony Mesh access, ESSENCE re
 
 **Tagline:** Build your own personal intelligence system — or connect to the full SELF OS ecosystem when you are ready.
 
-**Platforms:** **SELF OS Personal Intelligence** is a **mobile** layer — meant to run on the devices people carry every day. **Android** is **available now** in this repository (phone and tablet). **Apple (iOS)** is **coming soon**; the same product vision applies across platforms once the iOS edition ships.
+**Platforms:** **SELF OS Personal Intelligence** is a **mobile** layer — meant to run on the devices people carry every day. **Android** (phone and tablet) and **iOS** (iPhone and iPad) are **both available** in this repository.
 
 **Model providers:** You are not locked into one AI vendor. As you extend agents and apps, you can integrate **different model providers** — for example **[Resonatia](https://resonatia.io/docs)** (quantized models through a REST chat API; authentication and request shape are documented there), [OpenRouter](https://openrouter.ai), **OpenAI**, **Anthropic (Claude)**, **Google (Gemini)**, and other compatible APIs or on-device runtimes. **Community Edition** ships **deterministic example agents** only; wiring a provider means adding your own client code, credentials, and privacy review. See [docs/LOCAL_MODELS.md](docs/LOCAL_MODELS.md) for local vs cloud notes.
 
@@ -22,7 +22,7 @@ The full SELF OS experience adds managed agents, Harmony Mesh access, ESSENCE re
 
 ## 1. What is SELF OS Personal Intelligence?
 
-**Community Edition** is a standalone **Android** app and SDK workspace today: a reference **mobile personal intelligence shell** that shows how the open layer fits together. (An **iOS** edition is planned next.)
+**Community Edition** is a standalone **mobile** workspace: reference **Android** and **iOS** personal intelligence shells plus Kotlin SDKs that show how the open layer fits together.
 
 - A **shell UI** for your personal intelligence workspace (home, agents, apps, mesh preview, wallet preview, settings).
 - **On-device agent execution** via `AgentRuntime` — core to a local-first personal intelligence stack.
@@ -49,7 +49,7 @@ Live SELF OS backends are intentionally out of scope here. See [docs/OPEN_SOURCE
 
 ## 4. Features (personal intelligence experience)
 
-- **Mobile-native Android shell** — Material 3 / Jetpack Compose, six main destinations plus agent chat, tuned for daily personal intelligence on handhelds and tablets (**iOS** version coming soon).
+- **Mobile-native shells** — **Android:** Material 3 / Jetpack Compose. **iOS:** SwiftUI. Both offer six main destinations plus agent chat, tuned for daily personal intelligence on phones and tablets.
 - **Theme** controls (system / light / dark) so the shell feels like *your* environment.
 - **Agent chat** wired to `AgentRuntime.sendRequest` — conversational layer over local intelligence; swap in real LLMs via the providers you configure (OpenAI, Claude, Gemini, OpenRouter, [Resonatia](https://resonatia.io/docs), etc.).
 - **Mock app catalog** — practice how apps plug into a personal intelligence launcher (in-memory).
@@ -60,12 +60,11 @@ Live SELF OS backends are intentionally out of scope here. See [docs/OPEN_SOURCE
 The codebase is modular so you can evolve **personal intelligence** without a monolith. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 - `apps/self-shell` — the Android **personal intelligence** application (Gradle module name unchanged).
+- `apps/self-shell-ios` — the iOS **personal intelligence** application (SwiftUI, Xcode).
 - `sdk/agent-sdk`, `sdk/app-sdk` — contracts for agents and apps that live in the user’s PI stack.
 - `mock/*` — local-only stand-ins for mesh, wallet, store, and data-consent previews.
 
-## 6. Quick Start (Android — run the app on a device or emulator)
-
-This Quick Start is for **Android**; **iOS** setup will be documented when the Apple release is available.
+## 6. Quick Start
 
 Clone from GitHub (or open the `public-self-shell` folder if it lives inside your monorepo):
 
@@ -73,6 +72,8 @@ Clone from GitHub (or open the `public-self-shell` folder if it lives inside you
 git clone https://github.com/selflabs/SELF-OS.git
 cd SELF-OS
 ```
+
+### Android (device or emulator)
 
 Requirements: **JDK 17**, **Android SDK** (compileSdk 34), and a physical **Android** device or emulator.
 
@@ -87,6 +88,17 @@ On Windows:
 ```
 
 Open the project in Android Studio to iterate on your **personal intelligence** UI and agents.
+
+### iOS (simulator or device)
+
+Requirements: **macOS**, **Xcode 15+**, **iOS 17+** simulator or device.
+
+```bash
+cd apps/self-shell-ios
+open SelfOSPI.xcodeproj
+```
+
+Select the **SelfOSPI** scheme and press **Run** (⌘R). See [apps/self-shell-ios/README.md](apps/self-shell-ios/README.md) and [docs/IOS.md](docs/IOS.md).
 
 **Monorepo maintainers:** see [docs/GITHUB.md](docs/GITHUB.md) for pushing this tree to `selflabs/SELF-OS`.
 

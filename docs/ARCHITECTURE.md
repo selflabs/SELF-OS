@@ -1,10 +1,17 @@
 # Architecture
 
-## Modules (Gradle)
+## Applications
+
+| App | Stack | Role |
+|-----|-------|------|
+| `apps/self-shell` | Android / Jetpack Compose | Navigation, screens, theming. |
+| `apps/self-shell-ios` | iOS / SwiftUI | Same six-tab shell + agent chat; Swift `PIAgent` runtime. |
+
+## Modules (Gradle — Android & SDKs)
 
 | Module | Role |
 |--------|------|
-| `apps/self-shell` | Android application, navigation, screens, theming. |
+| `apps/self-shell` | Android application (see above). |
 | `sdk/agent-sdk` | `Agent`, `AgentRuntime`, manifests, permissions, requests/responses. |
 | `sdk/app-sdk` | `SelfApp`, `SelfAppManifest`, `PluginRegistry`. |
 | `mock/harmony-mesh-client` | `HarmonyMeshClient` + `MockHarmonyMeshClient`. |

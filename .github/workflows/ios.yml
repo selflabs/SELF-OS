@@ -1,0 +1,31 @@
+name: iOS build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/self-shell-ios/**'
+      - '.github/workflows/ios.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'apps/self-shell-ios/**'
+      - '.github/workflows/ios.yml'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: apps/self-shell-ios
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild \
+            -project SelfOSPI.xcodeproj \
+            -scheme SelfOSPI \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build
